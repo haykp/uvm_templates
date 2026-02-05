@@ -1,5 +1,5 @@
 
-module stack_model #(
+module pll_model #(
     parameter DEPTH = 4
 ) (
     input  logic clk,

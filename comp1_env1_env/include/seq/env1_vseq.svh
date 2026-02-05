@@ -5,6 +5,7 @@ class env1_vseq extends uvm_sequence;
     `uvm_object_utils (env1_vseq)
 
     agent1_sequencer agent1_seqr; // ut_del_pragma
+    env1_cfg         env_cfg;
   
     function new ( string name = "env1_vseq");
         super.new (name);
@@ -14,12 +15,15 @@ class env1_vseq extends uvm_sequence;
     virtual task pre_start();  
         if (agent1_seqr == null)
             `uvm_fatal("NO_OBJ", "Set an agent1_sequencer before start a sequencer")
+        if (env_cfg == null)
+            `uvm_fatal ("NO_CFG", "environment cfg object is null")
     endtask
     // ut_del_pragma_end
     
     virtual task body();
         // ut_del_pragma_begin
         agent1_base_seq agent1_seq = agent1_base_seq::type_id::create("agent1_seq") ;
+        agent1_seq.agent_cfg = env_cfg.agent1_cfg;
       	repeat(10) begin
             agent1_seq.start(agent1_seqr);
         end

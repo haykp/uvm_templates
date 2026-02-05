@@ -1,7 +1,8 @@
-`ifndef AGENT1_TYPES
-`define AGENT1_TYPES
+`ifndef AGENT1_TYPES_SVH
+`define AGENT1_TYPES_SVH
+   
 
-//`define some time
-// typeded enum {}
+
+// typedef enum {GREEN, RED, BLUE} color_t;
 
 `endif

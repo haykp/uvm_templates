@@ -1,6 +1,7 @@
-`ifndef AGENT1_PARAMS
-`define AGENT1_PARAMS
+`ifndef AGENT1_PARAMS_SVH
+`define AGENT1_PARAMS_SVH
 
-// paramter some param
+// paramters for agent
+// param ECAMPLE=10
 
 `endif

@@ -14,5 +14,5 @@ package comp1_agent1_pkg;
 
     `include "agent1_agent.svh"
 
-    `include "agent1_base_seq.svh"
+    `include "seq/agent1_base_seq.svh"
 endpackage

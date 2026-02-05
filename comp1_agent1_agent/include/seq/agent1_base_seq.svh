@@ -3,8 +3,8 @@
 
 class agent1_base_seq extends uvm_sequence #(agent1_item);
     `uvm_object_utils (agent1_base_seq)
-    
-    `uvm_declare_p_sequencer(agent1_sequencer)
+
+    agent1_config agent_cfg;
 
     function new ( string name = "agent1_base_seq");
       super.new (name);
@@ -13,7 +13,7 @@ class agent1_base_seq extends uvm_sequence #(agent1_item);
     virtual task body();  
 
       req = agent1_item::type_id::create("req");
-      req.cfg  = p_sequencer.cfg;
+      req.cfg  = agent_cfg;
       
       start_item(req);
 

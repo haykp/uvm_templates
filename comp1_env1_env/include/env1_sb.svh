@@ -1,11 +1,10 @@
 // ut_del_pragma_file
 
-`ifndef ENV1_STACK_SB_SVH
-`define ENV1_STACK_SB_SVH
+`ifndef ENV1_SB_SVH
+`define ENV1_SB_SVH
 
-class env1_stack_sb extends uvm_subscriber#(agent1_item);
-
-    `uvm_component_utils(env1_stack_sb)
+class env1_sb extends uvm_subscriber#(agent1_item);
+    `uvm_component_utils(env1_sb)
 
     stack_model gm;
 
